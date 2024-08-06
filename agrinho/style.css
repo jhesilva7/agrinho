@@ -1,0 +1,176 @@
+*
+{
+    font-family:'Courier New', Courier, monospace;
+    margin: 0;/*ficar grudado em cima*/
+    padding: 0;/*ficar grudado em baixo*/
+    box-sizing: border-box;/*manter o tamanho determinado independente do padding que eu colocar*/
+}
+
+.container{
+    max-width: 1280px;/*tamanho max da tela*/
+    margin: 0 auto;/*margem automatica*/
+    padding: 0 2%;/*margem de 2%*/
+}
+
+/*MENU*/
+
+header{
+    padding: 8px 0;
+    height: 90px;/*altura*/
+}
+
+.logo{
+    float: left;/*flutuar a esquerda*/
+    height: 10px;
+}
+
+.logo img{
+    height: 150px;
+}
+
+.menu-desk{
+    float: right;/*flutuar a direita*/
+}
+
+.menu-desk ul{
+    position: relative;
+    margin-top: 30px;
+}
+
+.menu-desk a{/*link*/
+    color: rgb(0, 25, 94);
+    text-decoration: none;/*tirar sublinhado*/
+}
+
+.menu-desk li{/*lista*/
+    padding: 0 10px;
+    font-weight: lighter;/*fonte*/
+    display: inline-block;/*deixa em linha, um do lado do outro*/
+}
+
+.menu-desk li.selected{
+    font-weight: bold;/*negrito*/
+}
+
+.menu-desk a:hover{
+    text-decoration: underline;/*sublinhado ao passar do mouse*/
+}
+
+/*BANNER*/
+
+.banner{
+    width: 100%;/*comprimento, 100% da tela*/
+    height: 460px;
+    background: url('../agrinho/img/banner.jpg');
+    background-repeat: no-repeat;/*uma unica imagem*/
+    background-size: cover;/*que a imagem preencha a tela*/
+    background-position: center;/*foto centralizada*/
+    text-align: center;
+}
+
+
+/*BOTAO*/
+
+.botao{
+
+    text-align: center;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 480px;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    border: 2px solid white ;
+    margin: 4px 2px;
+    display: inline-block;
+    position: absolute;
+    bottom: 70px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #ffffff00;
+    color: white;
+}
+
+.btn:hover{
+    background-color: rgb(0, 25, 94);
+    color: white;
+}
+
+/*TITULO*/
+h1{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(0, 25, 94);
+    text-align: center;
+}
+
+/*TEXTO*/
+p{
+    font-family: Georgia,serif;
+    text-align-last: left;
+    padding: 15px;
+}
+
+.article{
+    column-count: 2;
+    column-gap: 3rem;
+    column-rule: 5px dashed rgb(0, 25, 94);
+    
+}
+
+@media (max-width: 1024px) {
+    .logo img {
+        height: 80px;
+    }
+
+    .menu-desk {
+        float: none;
+        clear: both;
+        text-align: center;
+    }
+
+    .menu-desk ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .menu-desk li {
+        padding: 10px;
+    }
+
+    .banner {
+        height: 300px;
+    }
+
+    .botao {
+        margin-top: 20px;
+        bottom: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 60px;
+    }
+
+    .menu-desk li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .banner {
+        height: 250px;
+    }
+
+    .botao {
+        padding: 14px 28px;
+        font-size: 14px;
+        bottom: 200px;
+    }
+
+    
+}
